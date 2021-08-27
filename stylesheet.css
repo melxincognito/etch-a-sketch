@@ -1,0 +1,14 @@
+
+.grid {
+    background-color: plum;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    width: 480px;
+    margin: auto;
+    border-color: black;
+    border: solid;
+}
+
+body {
+    background-color: peachpuff;
+}
