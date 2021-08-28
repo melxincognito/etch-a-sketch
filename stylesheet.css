@@ -1,6 +1,30 @@
 
+
+body {
+    background-color: palevioletred;
+}
+
+
+h1 {
+    font-family: Allison;
+    font-size: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px
+
+    
+}
+
+p{
+    display: flex;
+    margin: 20px 100px;
+    font-family: Allison;
+    font-size: 50px
+} 
+
 .grid {
-    background-color: plum;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     width: 480px;
@@ -9,6 +33,13 @@
     border: solid;
 }
 
-body {
-    background-color: peachpuff;
+/** targeted the block class I created for the divs from the javascript file to change the color when the block is being 
+hovered over  **/ 
+
+.block:hover {
+    background-color:red;
+    transform: fill;
+    opacity: 1%;
+    
+
 }
