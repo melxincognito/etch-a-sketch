@@ -33,10 +33,7 @@ p{
     border: solid;
 }
 
-/** targeted the block class I created for the divs from the javascript file to change the color when the block is being 
-hovered over  **/ 
+/** targeted the block class I created for the divs from the javascript file **/
 .block { background-color: pink}
 
-.block:hover {
-    background-color: purple;
-}
+
