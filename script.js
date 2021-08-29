@@ -1,4 +1,5 @@
 
+
 for(x=0; x<= 255; x++) {
     var square = document.createElement('div');
     square.classList.add('block');
@@ -11,7 +12,17 @@ for(x=0; x<= 255; x++) {
 }
 
 function changeColor(e) {
-    e.target.style.backgroundColor = 'black';
+    e.target.style.backgroundColor = 'lightyellow';
 }
 
 
+function clear() {
+    window.location.reload();
+
+}
+
+const clearBoard = document.getElementById('clearBoard');
+
+clearBoard.addEventListener('click', () => { 
+    clear();
+});

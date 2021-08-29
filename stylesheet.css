@@ -24,6 +24,18 @@ p{
     font-size: 50px
 } 
 
+button {
+    font-family: Allison;
+    font-size: 30px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 20px auto;
+    background-color: lightpink;
+    border-color: white;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -32,6 +44,7 @@ p{
     border-color: black;
     border: solid;
 }
+
 
 /** targeted the block class I created for the divs from the javascript file **/
 .block { background-color: pink}
