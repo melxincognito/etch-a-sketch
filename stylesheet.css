@@ -35,11 +35,8 @@ p{
 
 /** targeted the block class I created for the divs from the javascript file to change the color when the block is being 
 hovered over  **/ 
+.block { background-color: pink}
 
 .block:hover {
-    background-color:red;
-    transform: fill;
-    opacity: 1%;
-    
-
+    background-color: purple;
 }
