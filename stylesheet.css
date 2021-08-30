@@ -37,16 +37,23 @@ button {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     width: 480px;
+    height: 480px;
+   align-items: stretch;
     margin: auto;
     border-color: black;
     border: solid;
 }
 
 
+
 /** targeted the block class I created for the divs from the javascript file **/
-.block { background-color: pink}
+.block { 
+    background-color: pink;
+    display: flex;
+    flex: 0 1 auto;
+}
 
 
