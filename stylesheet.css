@@ -17,6 +17,33 @@ h1 {
     
 }
 
+.gameContent {
+    display: flex;
+
+}
+
+.mode {
+    float: left
+}
+
+.content {
+    display: center;
+}
+
+.modeBlack {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+
+}
+.modeRainbow {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
 p{
     display: flex;
     margin: 20px 100px;
@@ -49,8 +76,6 @@ button {
 }
 
 
-
-/** targeted the block class I created for the divs from the javascript file **/
 .block { 
     background-color: pink;
     display: flex;

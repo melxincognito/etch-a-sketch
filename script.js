@@ -1,13 +1,17 @@
 // constants and variables set
 
 const clearBoard = document.getElementById('clearBoard');
-const defaultGridSize = 16
-var grid = document.getElementById('grid')
+const grid = document.getElementById('grid');
+const blackBtn = document.getElementById('modeBlack');
+const rainbowBtn = document.getElementById('modeRainbow')
+const defaultGridSize = 16;
 const newGridSize = ''
 
 
+
+
 function newGridPrompt(newGridSize) {
-     newGridSize = prompt('How many squares do you want in your next grid? (max 100)');
+     newGridSize = prompt('How many squares do you want in your next grid? (max 70)');
     newGridSize = parseInt(newGridSize);
     setGrid(newGridSize);
 }
@@ -30,18 +34,22 @@ function setGrid(size) {
         square.style.position= 'relative';
         square.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         square.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-        square.addEventListener('mouseover', changeColor)
+        square.addEventListener('mouseover', rainbowColor)
         document.getElementById('grid').appendChild(square);
     }
+    
     
 }
 
 
 function changeColor(e) {
-    e.target.style.backgroundColor = 'lightyellow';
+    e.target.style.backgroundColor = 'black';
 }
 
-
+function rainbowColor(e) {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    e.target.style.backgroundColor = "#" + randomColor;
+}
 
 function clear() {
     grid.innerHTML = ''
