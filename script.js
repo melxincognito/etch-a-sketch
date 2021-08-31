@@ -3,7 +3,7 @@
 const clearBoard = document.getElementById('clearBoard');
 const defaultGridSize = 16
 var grid = document.getElementById('grid')
-const newGridSize = null
+const newGridSize = ''
 
 
 function newGridPrompt(newGridSize) {
@@ -25,8 +25,9 @@ function setGrid(size) {
         var square = document.createElement('div');
         square.classList.add('block');
         square.setAttribute('id', 'squares');
-        square.style.width = '30px';
-        square.style.height= '30px';
+        square.style.width = `${600 / size}px`;
+        square.style.height= `${600 / size}px`;
+        square.style.position= 'relative';
         square.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         square.style.gridTemplateRows = `repeat(${size}, 1fr)`;
         square.addEventListener('mouseover', changeColor)
