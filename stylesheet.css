@@ -23,7 +23,7 @@ h1 {
 }
 
 .mode {
-    float: left
+    float: left;
 }
 
 .content {
@@ -34,14 +34,12 @@ h1 {
     background-color: black;
     color: white;
     padding: 20px;
-    border-radius: 50%;
 
 }
 .modeRainbow {
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     color: white;
     padding: 20px;
-    border-radius: 50%;
 }
 
 p{
@@ -61,6 +59,7 @@ button {
     margin: 20px auto;
     background-color: lightpink;
     border-color: white;
+    border-radius: 50%;
 }
 
 .grid {
@@ -82,4 +81,11 @@ button {
     flex: 0 1 auto;
 }
 
+
+.footer {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
 
