@@ -1,91 +1,97 @@
-
-
 body {
-    background-color: palevioletred;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 115, 60, 0.856),
+    rgb(209, 69, 116),
+    rgba(53, 21, 80, 0.986)
+  );
 }
 
-
 h1 {
-    font-family: Allison;
-    font-size: 60px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px
-
-    
+  font-family: Allison;
+  font-size: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
 
 .gameContent {
-    display: flex;
-
+  display: flex;
 }
 
 .mode {
-    float: left;
+  float: left;
 }
 
 .content {
-    display: center;
+  display: center;
 }
 
 .modeBlack {
-    background-color: black;
-    color: white;
-    padding: 20px;
-
+  background-color: black;
+  color: white;
+  padding: 20px;
 }
 .modeRainbow {
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    color: white;
-    padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  color: white;
+  padding: 20px;
 }
 
-p{
-    display: flex;
-    margin: 20px 100px;
-    font-family: Allison;
-    font-size: 50px
-} 
+p {
+  display: flex;
+  margin: 20px 100px;
+  font-family: Allison;
+  font-size: 50px;
+}
 
 button {
-    font-family: Allison;
-    font-size: 30px;
-    padding: 15px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin: 20px auto;
-    background-color: lightpink;
-    border-color: white;
-    border-radius: 50%;
+  font-family: Allison;
+  font-size: 30px;
+  padding: 15px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 20px auto;
+  background-color: rgb(102, 63, 165);
+  border-color: white;
+  border-radius: 50%;
+  box-shadow: 2px 7px rgba(50, 1, 78, 0.712);
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
-    align-items: stretch;
-    margin: auto;
-    border-color: black;
-    border: solid;
-
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+  align-items: stretch;
+  margin: auto;
+  border-color: black;
+  border: solid 20px;
+  box-shadow: 10px 15px rgba(25, 0, 41, 0.788);
 }
 
-
-.block { 
-    background-color: pink;
-    display: flex;
-    flex: 0 1 auto;
+.block {
+  background-color: pink;
+  display: flex;
+  flex: 0 1 auto;
 }
-
 
 .footer {
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
 }
-

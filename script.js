@@ -5,14 +5,17 @@ const grid = document.getElementById("grid");
 const blackBtn = document.getElementById("modeBlack");
 const rainbowBtn = document.getElementById("modeRainbow");
 const defaultGridSize = 16;
+const defaultMode = blackColor;
 const newGridSize = "";
 
-function newGridPrompt(newGridSize) {
+function newGridPrompt(newGridSize, newMode) {
   newGridSize = prompt(
-    "How many squares do you want in your next grid? (max 70)"
+    "Input the number of squares you want on your next grid(max 70) The bigger the number, the smaller the squares!"
   );
+
   newGridSize = parseInt(newGridSize);
-  setGrid(newGridSize);
+
+  setGrid(newGridSize, rainbowColor);
 }
 
 // event listeners
@@ -22,7 +25,7 @@ clearBoard.addEventListener("click", () => {
   newGridPrompt();
 });
 
-function setGrid(size) {
+function setGrid(size, mode) {
   for (x = 0; x < size * size; x++) {
     var square = document.createElement("div");
     square.classList.add("block");
@@ -32,22 +35,18 @@ function setGrid(size) {
     square.style.position = "relative";
     square.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     square.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-    square.addEventListener("mouseover", rainbowColor);
+    square.addEventListener("mouseover", mode);
     document.getElementById("grid").appendChild(square);
   }
 }
+
 blackBtn.addEventListener("click", () => {
   clear();
-  newGridPrompt(newGridSize),
-    () => {
-      square.removeEventListener("mouseover", rainbowColor);
-      square.addEventListener("mouseover", changeColor);
-      document.getElementById("grid").appendChild(square);
-    };
+  newGridPrompt();
 });
 
-function changeColor(e) {
-  e.target.style.backgroundColor = "black";
+function blackColor(e) {
+  e.target.style.backgroundColor = "#000000";
 }
 
 function rainbowColor(e) {
@@ -60,5 +59,5 @@ function clear() {
 }
 
 window.onload = () => {
-  setGrid(defaultGridSize);
+  setGrid(defaultGridSize, defaultMode);
 };
