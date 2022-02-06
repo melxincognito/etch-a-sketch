@@ -15,14 +15,14 @@ function newGridPrompt(newGridSize, newMode) {
 
   newGridSize = parseInt(newGridSize);
 
-  setGrid(newGridSize, rainbowColor);
+  setGrid(newGridSize, newMode);
 }
 
 // event listeners
 
 clearBoard.addEventListener("click", () => {
   clear();
-  newGridPrompt();
+  newGridPrompt(newGridSize, blackColor);
 });
 
 function setGrid(size, mode) {
@@ -42,7 +42,11 @@ function setGrid(size, mode) {
 
 blackBtn.addEventListener("click", () => {
   clear();
-  newGridPrompt();
+  newGridPrompt(newGridSize, blackColor);
+});
+rainbowBtn.addEventListener("click", () => {
+  clear();
+  newGridPrompt(newGridSize, rainbowColor);
 });
 
 function blackColor(e) {
